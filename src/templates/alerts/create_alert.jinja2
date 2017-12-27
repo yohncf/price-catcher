@@ -1,0 +1,30 @@
+{% extends "base.jinja2" %}
+{% block content %}
+    <div class="modal-header">
+        <h1>New Alert</h1>
+    </div>
+    <div class="container mt-md-5 border border-info rounded w-75 div-color">
+        <form class="my-3" method="POST" action="{{ url_for('alerts.create_alert') }}">
+            <div class="form-group">
+                <label for="item_url">Item Name</label>
+                <input type="text" class="form-control" id="item_name" name="item_name" placeholder="name">
+            </div>
+            <div class="form-group">
+                <label for="item_url">Item URL</label>
+                <input type="url" class="form-control" id="item_url" name="item_url" placeholder="www.store.com/item">
+            </div>
+            <div class="form-group">
+                <label for="price">Price Limit</label>
+                <div class="input-group">
+                    <div class="input-group-addon">$</div>
+                    <input type="number" step="0.01" class="form-control" id="price" name="price" placeholder="74.30"
+                           aria-describedby="price_des">
+                </div>
+                <p id="price_des" class="text-muted">We'll send you an email when the item price is equal or lower than this </p>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-lg btn-block btn-info">Create new alert</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

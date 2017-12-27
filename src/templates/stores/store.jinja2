@@ -1,0 +1,24 @@
+{% extends 'base.jinja2' %}
+{% block content %}
+
+    <div class="modal-header">
+        <h1>{{ store.name }}</h1>
+    </div>
+    <div class="border rounded p-4">
+        <p>The URL for this store is: <strong>{{ store.url_prefix }}</strong></p>
+        <p>The store has the items' prices in the tag : <strong>{{ store.p_tag_name }}</strong><br/>
+            Using the query: <strong>{{ store.p_query }}</strong></p>
+        <p>The store identifies the items' names with the tag : <strong>{{ store.n_tag_name }}</strong><br/>
+            Using the query: <strong>{{ store.n_query }}</strong></p>
+        {% if session['email'] in config.ADMINS %}
+            <a href="{{ url_for('stores.edit_store', store_id=store._id) }}">
+                <button type="button" class="btn btn-warning btn-lg mb-1">Edit store</button>
+            </a>
+            <br/>
+            <a href="{{ url_for('stores.delete_store', store_id=store._id) }}">
+                <button type="button" class="btn btn-danger btn-lg">Delete store</button>
+            </a>
+        {% endif %}
+    </div>
+
+{% endblock %}

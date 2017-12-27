@@ -1,0 +1,29 @@
+{% extends 'base.jinja2' %}
+{% block content %}
+
+    <div class="modal-header">
+        <h1>Stores<small> List of supported stores</small></h1>
+        {% if session['email'] in config.ADMINS%}
+            <a href="{{ url_for('stores.create_store') }}">
+                <button type="button" class="btn btn-primary float-right mt-1">
+                    New store <span class="oi oi-plus" title="New Alert" aria-hidden="true"></span>
+                </button>
+            </a>
+        {% endif %}
+
+    </div>
+
+    <div class="container">
+        {% for foo in stores %}
+            <div class="card float-left ml-3 mt-3" style="width: 20em">
+                <div class="card-body">
+                    <h4 class="card-title">{{ foo.name}}</h4>
+                    <p class="card-text">All the links of this store should start with: {{ foo.url_prefix }}</p>
+                    <a href="{{ url_for('stores.store_page', store_id=foo._id) }}" class="btn btn-primary">Store info</a>
+                </div>
+            </div>
+        {% endfor %}
+                
+    </div>
+
+{% endblock %}

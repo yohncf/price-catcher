@@ -1,0 +1,45 @@
+{% extends 'base.jinja2' %}
+{% block content %}
+
+      <div class="modal-header">
+        <h1>Create a new store</h1>
+    </div>
+    <div class="container mt-md-5 mb-2 border border-info rounded w-75 div-color">
+        <br/>
+        <form method="post" >
+        <div class="form-group">
+            <label for="name">Store Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Store Name">
+        </div>
+        <div class="form-group">
+            <label for="url">URL Prefix</label>
+            <input type="text" class="form-control" id="url" name="url" placeholder="htt://www.storename.com">
+        </div>
+        <div class="form-group">
+            <label for="price_tag">Price tag name</label>
+            <input type="text" class="form-control" id="price_tag" name="price_tag"
+                   placeholder="span">
+        </div>
+        <div class="form-group">
+            <label for="price_query">Price query</label>
+            <input type="text" class="form-control" id="price_query" name="price_query"
+                   placeholder='{ "id" : "price-now" }'>
+        </div>
+        <div class="form-group">
+            <label for="name_tag">Products tag name</label>
+            <input type="text" class="form-control" id="name_tag" name="name_tag"
+                   placeholder="span">
+        </div>
+        <div class="form-group">
+            <label for="name_query">Name query</label>
+            <input type="text" class="form-control" id="name_query" name="name_query"
+                   placeholder='{ "id" : "price-now" }'>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-lg btn-block btn-info">Create</button>
+            <br/>
+        </div>
+        </form>
+    </div>
+
+{% endblock %}
