@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5b9279e-8569-4d63-a759-c11d168e40f8" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/webResources.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Procfile" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/runtime.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/uwsgi.ini" />
-      <change beforePath="$PROJECT_DIR$/requirements" afterPath="$PROJECT_DIR$/requirements" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
