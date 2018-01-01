@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request, json, redirect, url_for
 
 from src.models.stores.store import Store
-from decorators import requires_admin
+from src.decorators import requires_admin
 
 __author__ = 'YohnCF'
 
