@@ -1,6 +1,6 @@
 from flask import Blueprint, request, session, redirect, url_for, render_template
 import src.models.users.errors as UserErrors
-from decorators import requires_login
+from src.decorators import requires_login
 from src.models.users.user import User
 
 __author__ = 'YohnCF'
