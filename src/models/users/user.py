@@ -1,6 +1,6 @@
 import uuid
 
-from models.alerts.alert import Alert
+from src.models.alerts.alert import Alert
 from src.common.database import Database
 from src.common.utils import Utils
 import src.models.users.errors as err
